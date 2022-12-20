@@ -1,21 +1,30 @@
 // Follow along with the examples here
-function sayHello(){
-    console.log('Hello, World!');
+function sayHelloTo(firstName){
+    console.log(`Hello, ${firstName}`);
 }
-sayHello();
+sayHelloTo('Guadalupe');
+sayHelloTo('Jane');
+sayHelloTo('R2-D2');
+sayHelloTo(1);
 
-function sayHelloToGuadalupe(){
-    console.log('Hello, Guadalupe!');
+function say(greeting, firstName){
+    console.log('I was called!');
+    return `${greeting}, ${firstName}!`;
 }
-sayHelloToGuadalupe();
+say('Julio', 'Hello');
 
-function sayHelloToLiz(){
-    console.log('Hello, Liz');
+function add(x, y){
+    return x + y;
 }
-sayHelloToLiz();
+console.log(add(1,2));
+console.log(say('Hello','Liz'));
 
-function sayHelloToSamip(){
-    console.log('Hello, Samip!');
+/*
+ * Function to caluclate area of a circle 
+ * args: radius => int
+ */
+function circleArea(radius){
+    const area = 3.14 * (radius * radius);
+    return area;
 }
-sayHelloToSamip();
-
+console.log(`The area of the circle is: ${circleArea(5)}cm squared`);
